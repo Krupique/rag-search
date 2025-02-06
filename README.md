@@ -7,3 +7,23 @@ This project focuses on developing the second part of an intelligent document se
 
 * https://huggingface.co/meta-llama/Meta-Llama-3-70B/tree/main
 * https://build.nvidia.com/meta/llama-3_3-70b-instruct
+
+## Hot to run
+```bash
+poetry install
+```
+```bash
+docker run --name vectordb -dit -p 6333:6333 qdrant/qdrant
+```
+
+```bash
+poetry run python app/vector_db.py
+```
+
+```bash
+poetry run python app/start_api.py
+```
+
+```bash
+poetry run streamlit run app/webapp.py
+```
